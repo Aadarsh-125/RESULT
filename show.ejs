@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students Marks</title>
+</head>
+<body>
+    <h3>Student marks Details:</h3>
+    <ul>
+        <li>Name: <%= student.name %> </li>
+        <li>Roll Number: <%= student.rollNumber %> </li>
+        <li>Batcg name: <%= student.batch %> </li>
+        <li>Student ID: <%= student.studentId %> </li>
+        <li>Subjects Marks: <%=student.subject %> </li>
+    </ul>
+    <br>
+    <a href="/students/<%= student._id %>/edit">Edit this Listing</a>
+    <form method="post" action="/students/<%= student._id %>?_method=DELETE">
+        <button>Delete This Listing</button>
+    </form>
+</body>
+</html>
